@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 35vw;
+
+  margin: 3vw auto;
+}
+h1 {
+  background-color: lightcoral;
+  padding: 5rem;
+  font-size: 64pt;
+  text-align: center;
+  font-family: "Lobster";
+  font-weight: lighter;
+}
+li {
+  flex-direction: row;
+  align-items: flex-start;
+}
