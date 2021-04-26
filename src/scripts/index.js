@@ -20,7 +20,7 @@ const add2List = () => {
     document.querySelector("#userData").value = "";
     const listItems = document.querySelectorAll("li");
     listItems.forEach((item) => {
-      item.style.color = colorGen();
+      //   item.style.color = colorGen();
     });
     const newContainer = document.createElement("div");
     const doneButton = document.createElement("button");
@@ -35,8 +35,8 @@ const add2List = () => {
     // checkBox.type = "checkbox";
     // newContainer.appendChild(checkBox);
 
-    doneButton.innerHTML = "done";
-    deleteButton.innerHTML = "skip";
+    doneButton.innerHTML = "I did it";
+    deleteButton.innerHTML = "next time";
 
     const check = () => {
       newLi.classList.innerHTML.toggle("completed");
@@ -46,19 +46,21 @@ const add2List = () => {
     };
     doneButton.addEventListener("click", check);
     deleteButton.addEventListener("click", del);
+    doneButton.classList.add("done");
+    deleteButton.classList.add("skip");
   } else {
     document.querySelector("#userData").placeholder = "Type something first!";
   }
 };
 
-const colorGen = () => {
-  let result = "#";
-  let colorCode = "1234567890ABCDEF";
-  for (let i = 0; i < 6; i++) {
-    result += colorCode[Math.floor(Math.random() * 16)];
-  }
-  return result;
-};
+// const colorGen = () => {
+//   let result = "#";
+//   let colorCode = "1234567890ABCDEF";
+//   for (let i = 0; i < 6; i++) {
+//     result += colorCode[Math.floor(Math.random() * 16)];
+//   }
+//   return result;
+// };
 
 const keyCheck = (event) => {
   if (event.key == "Enter") add2List();

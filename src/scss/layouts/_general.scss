@@ -1,21 +1,66 @@
+body {
+  background-color: peachpuff;
+}
 .list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 35vw;
-
+  background-color: lightcoral;
   margin: 3vw auto;
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28vw;
+    margin-top: -5rem;
+    background-color: tan;
+    flex-direction: column;
+    border-radius: 2.5rem;
+    align-self: center;
+    padding: 0.5rem;
+    align-items: center;
+    textarea {
+      font-family: "Lobster";
+    }
+  }
+}
+input[type="text"] {
+  background-color: peachpuff;
+  border: none;
+  border-radius: 0.8rem;
+  align-self: center;
+  width: max-content;
+  font-size: 2rem;
 }
 h1 {
-  background-color: lightcoral;
+  border-radius: 4px;
+  color: teal;
   padding: 5rem;
   font-size: 64pt;
   text-align: center;
   font-family: "Lobster";
   font-weight: lighter;
 }
-li {
-  flex-direction: row;
-  align-items: flex-start;
+
+button {
+  border: none;
+  font-family: "Lobster";
+  height: 3rem;
+  width: 4.5rem;
+  background-color: transparent;
+}
+.done {
+  background-color: teal;
+}
+.skip {
+  background-color: tomato;
+}
+ul {
+  list-style: none;
+  align-self: start;
+
+  li {
+  }
 }
