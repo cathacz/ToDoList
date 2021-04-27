@@ -6,21 +6,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 35%;
-  background-color: lightcoral;
+  width: 45%;
+  background-color: rgba(236, 116, 90, 0.314);
   margin: 3vw auto;
   .input {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75%;
-    margin-top: -5rem;
-    background-color: tan;
+    border: rgba(73, 195, 105, 0.314) 3px solid;
+    // background-color: tan;
     flex-direction: column;
-    border-radius: 2.5rem;
+
     align-self: center;
     padding: 0.5rem;
     align-items: center;
+  }
+  .input:active {
+    // background-color: lightcoral;
   }
 }
 input[type="text"] {
@@ -32,9 +35,10 @@ input[type="text"] {
   font-size: 1.5rem;
 }
 h1 {
-  border-radius: 4px;
+  border: 2px solid lightcoral;
+
   color: teal;
-  padding: 5rem;
+  padding: 2rem 7.5rem 2rem 7.5rem;
   font-size: 64pt;
   text-align: center;
   font-family: "Lobster";
