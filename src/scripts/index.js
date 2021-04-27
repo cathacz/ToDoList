@@ -21,12 +21,15 @@ const add2List = () => {
     const listItems = document.querySelectorAll("li");
     listItems.forEach((item) => {
       //   item.style.color = colorGen();
+      // console.log(listItems);
     });
     const newContainer = document.createElement("div");
     const doneButton = document.createElement("button");
+    const skipButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
     newContainer.appendChild(doneButton);
+    newContainer.appendChild(skipButton);
     newContainer.appendChild(deleteButton);
     newLi.appendChild(newContainer);
 
@@ -36,18 +39,26 @@ const add2List = () => {
     // newContainer.appendChild(checkBox);
 
     doneButton.innerHTML = "I did it";
-    deleteButton.innerHTML = "next time";
+    skipButton.innerHTML = "next time";
+    deleteButton.innerHTML = "forget it ";
 
     const check = () => {
       newLi.classList.innerHTML.toggle("completed");
     };
+    const skip = () => {
+      listItems.split();
+      console.log(listItems);
+    };
     const del = () => {
       newLi.remove();
     };
+
     doneButton.addEventListener("click", check);
+    skipButton.addEventListener("click", skip);
     deleteButton.addEventListener("click", del);
     doneButton.classList.add("done");
-    deleteButton.classList.add("skip");
+    skipButton.classList.add("skip");
+    deleteButton.classList.add("del");
   } else {
     document.querySelector("#userData").placeholder = "Type something first!";
   }
