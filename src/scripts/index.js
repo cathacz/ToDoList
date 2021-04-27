@@ -7,7 +7,7 @@ const create = () => {
   newElement.appendChild(newText);
   document.body.appendChild(newElement);
 };
-
+const arr = [];
 const add2List = () => {
   let userData = document.querySelector("#userData").value;
   //   console.log(userData);
@@ -38,16 +38,15 @@ const add2List = () => {
     // checkBox.type = "checkbox";
     // newContainer.appendChild(checkBox);
 
-    doneButton.innerHTML = "I did it";
-    skipButton.innerHTML = "next time";
-    deleteButton.innerHTML = "forget it ";
+    doneButton.innerHTML = "Did it";
+    skipButton.innerHTML = "Skip it";
+    deleteButton.innerHTML = "Forget it ";
 
     const check = () => {
       newLi.classList.innerHTML.toggle("completed");
     };
     const skip = () => {
-      listItems.split();
-      console.log(listItems);
+      newLi.remove();
     };
     const del = () => {
       newLi.remove();
@@ -59,6 +58,7 @@ const add2List = () => {
     doneButton.classList.add("done");
     skipButton.classList.add("skip");
     deleteButton.classList.add("del");
+    newContainer.classList.add("buttons");
   } else {
     document.querySelector("#userData").placeholder = "Type something first!";
   }

@@ -7,7 +7,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 45%;
-  background-color: rgba(236, 116, 90, 0.314);
+  background-color: $faded-rosa;
   margin: 3vw auto;
   .input {
     display: flex;
@@ -24,6 +24,7 @@ body {
   }
   .input:active {
     // background-color: lightcoral;
+    // console.log(listItems);    border: none;
   }
 }
 input[type="text"] {
@@ -33,6 +34,8 @@ input[type="text"] {
   align-self: center;
   width: max-content;
   font-size: 1.5rem;
+  &:active {
+  }
 }
 h1 {
   border: 2px solid lightcoral;
@@ -53,10 +56,20 @@ button {
   width: 4.5rem;
   background-color: transparent;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+
 .done {
   background-color: teal;
 }
 .skip {
+  background-color: blanchedalmond;
+}
+.del {
   background-color: tomato;
 }
 ul {
@@ -71,7 +84,7 @@ ul {
   li {
     margin: 0.2rem;
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
   }
