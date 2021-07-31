@@ -1,66 +1,68 @@
 body {
   background-color: peachpuff;
+  @include flex-box;
 }
 .list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 45%;
+  @include flex-column;
+  width: 45vw;
   background-color: $faded-rosa;
-  margin: 3vw auto;
+  margin: 3vw 3vw 3vw 3vw;
+
+  @include sm {
+    width: 90vw;
+    // margin: 3vw 3vw 3vw 3vw;
+  }
   .input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-
-    // background-color: tan;
-    flex-direction: column;
-
+    @include flex-column;
     align-self: center;
     padding: 0.5rem;
     align-items: center;
-  }
-  .input:active {
-    // background-color: lightcoral;
-    // console.log(listItems);    border: none;
   }
 }
 input[type="text"] {
   background-color: peachpuff;
   border: none;
-  border-radius: 0.8rem;
+  border-radius: 0.2rem;
   align-self: center;
-  width: max-content;
   font-size: 1.5rem;
-  &:active {
+  padding: 0.4rem;
+  font-family: "Courier New", Courier, monospace;
+  @include sm {
+    font-size: 1rem;
+    width: 70vw;
   }
 }
 h1 {
-  border: 2px solid lightcoral;
-
   color: teal;
   padding: 2rem 7.5rem 2rem 7.5rem;
-  font-size: 64pt;
+  font-size: 6rem;
   text-align: center;
   font-family: "Lobster";
   font-weight: lighter;
+  @include sm {
+    width: 100vw;
+    font-size: 3rem;
+    padding: none;
+  }
 }
 
 button {
-  border-radius: 3rem;
+  justify-self: flex-end;
+  border-radius: 0.2rem;
   border: none;
   font-family: "Lobster";
   height: 3rem;
   width: 4.5rem;
   background-color: transparent;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5rem;
+  margin-left: 0.6rem;
+  &:hover {
+    cursor: pointer;
+  }
+  @include sm {
+    height: 2rem;
+    width: 3.5rem;
+    margin-left: 0.3rem;
+  }
 }
 
 .done {
@@ -72,23 +74,35 @@ button {
 .del {
   background-color: tomato;
 }
-form {
-  border: rgba(73, 195, 105, 0.314) 3px solid;
-}
+
 ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  justify-self: space-between;
-  justify-content: space-between;
+  @include flex-column;
   list-style: none;
+  border: 3px solid red;
+  width: 40vw;
+  justify-content: center;
+  @include sm {
+    width: 80vw;
+  }
 
   li {
-    margin: 0.2rem;
+    font-family: "Courier New", Courier, monospace;
+    width: 25vw;
+    margin: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    align-self: center;
+    border: 3px solid blue;
+    @include sm {
+      // @include flex-row;
+      // align-self: center;
+      border: 3px solid blue;
+      width: 90vw;
+      justify-content: space-between;
+
+      // margin: 0.4rem;
+    }
   }
 }

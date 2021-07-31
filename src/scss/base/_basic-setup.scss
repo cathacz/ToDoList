@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// invisible scrollbar
+
+body {
+  -ms-overflow-style: none; // >>> IE, Edge
+  scrollbar-width: none; // >>> Firefox
+}
+body::-webkit-scrollbar {
+  display: none; // >>> Chrome, Safari, Opera
+}
