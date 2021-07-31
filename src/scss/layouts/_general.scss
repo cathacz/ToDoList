@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 75%;
-    border: rgba(73, 195, 105, 0.314) 3px solid;
+
     // background-color: tan;
     flex-direction: column;
 
@@ -66,11 +66,14 @@ button {
 .done {
   background-color: teal;
 }
-.skip {
+.later {
   background-color: blanchedalmond;
 }
 .del {
   background-color: tomato;
+}
+form {
+  border: rgba(73, 195, 105, 0.314) 3px solid;
 }
 ul {
   display: flex;

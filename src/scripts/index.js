@@ -131,6 +131,8 @@ const drawList = () => {
       newContainer.appendChild(deleteButton);
 
       doneButton.classList.add("done");
+      laterButton.classList.add("later");
+      deleteButton.classList.add("del");
       newLi.appendChild(newContainer);
       deleteButton.addEventListener("click", () => del(item));
       doneButton.addEventListener("click", () =>
